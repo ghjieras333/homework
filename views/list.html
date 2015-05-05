@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+  <h1>Posts</h1>
+  <p>You have <strong>{{ posts.length }}</strong> posts!</p>
+  <p><a href="/post/new">Create a Post</a></p>
+  <ul id="posts">
+    {% for post in posts %}
+      <li>
+        <h2>{{ post.title }}</h2>
+        <p><a href="/post/{{ post.id }}">Read post</a></p>
+      </li>
+	    
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color:yellow}
+</style>
+<meta charset='utf-8'>
+	<title>今日新聞</title>
+
+<body>
+<ul class="navbar">
+  <li><a href="110110660a.html">小S牙膏廣告不實 陸重罰3千萬</a>
+</ul>
+<p>
+<table border="3" style="width:100%">
+<tr>
+<td><a href="http://www.ettoday.net/">ETtoday東森新聞雲</a></td>
+</p>
+<td><img src="http://cache.ettoday.net/web_2011/images/ettoday_net_logo.jpg"></td>
+</tr>
+<p>
+<tr>
+<td><a href="http://tw.news.yahoo.com/">Yahoo奇摩新聞</a></td>
+</p>
+<td><img src="http://img.technews.tw/wp-content/uploads/2014/09/yahoo-o81ihm.jpg"></td>
+</tr>
+</table>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9ZQkD-gQGnw" frameborder="0" allowfullscreen></iframe>
+</body>
+
+</head>
+</html>
+
+
+    {% endfor %}
+  </ul>
+{% endblock %}
